@@ -1,0 +1,8 @@
+{% extends 'shop/base.html' %}
+{% block content %}
+{% for list in object_list%}
+<li>
+    <a href="{% url 'shopping_list:shopping-items' list.id %}">{{list}}</a>
+</li>
+{% endfor %}
+{% endblock%}
