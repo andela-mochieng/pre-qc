@@ -1,0 +1,23 @@
+{% extends 'book/base.html' %}
+{% block content %}
+<div class="panel panel-default">
+   <div class="panel-body">
+       
+<form method="POST" class="form-horizontal">
+    {%csrf_token%}
+    <div class="form-group">
+        <label for="{{ category_form.name.id_for_label }}">Name</label>
+        {{ category_form.name }}
+        {{ category_form.name.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ category_form.category.id_for_label }}">Category</label>
+        {{ category_form.category }}
+        {{ category_form.category.errors }}
+    </div>
+    <button class="btn btn-success pull-right">Submit</button>
+</form>
+   </div> 
+</div>
+
+{% endblock %}

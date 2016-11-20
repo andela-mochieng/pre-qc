@@ -1,0 +1,20 @@
+{% extends 'book/base.html' %}
+{% block content %}
+{% if object_list %}
+<div class="panel pandel-default">
+<div class="panel-body">
+    {% for book in object_list %}
+    <h1>
+        Category: {{book.category}}
+        </h1>
+        <li>
+        Book: {{book.name}}
+        </li>
+    {% endfor%}
+</div>
+    
+</div>
+{% else %}
+<p>No categories created</p>
+{% endif %}
+{% endblock%}

@@ -1,0 +1,12 @@
+{% extends 'book/base.html' %}
+{% block content %}
+<div class="panel pandel-default">
+<div class="panel-body">
+<form class="form-horizontal" action="" method="post">
+    {% csrf_token %}{% include 'book/form_layout.html' %}
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>
+    
+</div>
+{% endblock%}
